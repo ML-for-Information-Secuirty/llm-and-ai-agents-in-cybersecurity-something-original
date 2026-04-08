@@ -25,7 +25,7 @@ def normalize_log(raw_event: dict) -> dict:
 
     normalized['event_src.host'] = system.get('Computer', 'unknown')
 
-    subj_path = fields.get('Image', '')
+    subj_path = fields.get('Image') or fields.get('ProcessName') or ''
     subj_name = subj_path.split('\\')[-1] if subj_path else ''
     subj_dir = '\\'.join(subj_path.split('\\')[:-1]) + '\\' if subj_path else ''
 
@@ -34,7 +34,7 @@ def normalize_log(raw_event: dict) -> dict:
     normalized['subject.process.fullpath'] = subj_path
     normalized['subject.process.name'] = subj_name
     normalized['subject.process.path'] = subj_dir
-    normalized['subject.process.cmdline'] = fields.get('CommandLine', '')
+    normalized['subject.process.cmdline'] = fields.get('CommandLine') or fields.get('ProcessName', '')
     normalized['subject.process.hash'] = fields.get('Hashes', '')
 
     user_raw = fields.get('User', '')
@@ -50,19 +50,6 @@ def normalize_log(raw_event: dict) -> dict:
         normalized['object.process.name'] = obj_name
         normalized['object.process.path'] = obj_dir
         normalized['object.process.id'] = fields.get('ParentProcessId', '')
-
-    event_id = system.get('EventID', '')
-    if event_id == "1":
-        normalized["object.process.parent.id"] = ""
-
-    elif event_id == "10":
-        normalized["object.process.parent.id"] = fields.get("TargetParentProcessId", "")
-
-    elif event_id == "8":
-        normalized["object.process.parent.id"] = fields.get("TargetProcessParentId", "")
-   
-    else:
-        normalized["object.process.parent.id"] = ""
 
     return normalized
 
