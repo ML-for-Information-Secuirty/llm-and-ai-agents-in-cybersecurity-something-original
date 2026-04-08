@@ -1,97 +1,55 @@
 from pathlib import Path
 import os
 import json
-import re
-from typing import Dict, Any
+
+from typing import Dict
 import yaml
 from tqdm import tqdm
 
 
-def extract_path_parts(fullpath: str) -> tuple:
-    """Разбивает путь на имя файла и директорию с завершающим слэшем."""
-    if not fullpath:
-        return "", "", ""
+def normalize_log(raw_event: dict) -> dict:
+    """Парсит сырой JSON Sysmon в нормализованный формат."""
 
-    name = os.path.basename(fullpath)
-    directory = os.path.dirname(fullpath)
-
-    # В примере нормализации путь заканчивается на слэш (например, /bin/)
-    if directory and directory != '/':
-        path = directory + '/'
-    elif directory == '/':
-        path = '/'
-    else:
-        path = ""
-
-    return fullpath, name, path
-
-
-def truncate_timestamp(iso_time: str) -> str:
-    """Обрезает время до миллисекунд по примеру: .969912413Z -> .969Z"""
-    if not iso_time:
-        return ""
-    match = re.match(r"(.+\.\d{3})\d*(Z?)", iso_time)
-    if match:
-        return match.group(1) + "Z"
-    return iso_time
-
-
-def get_nested(data: Dict, *keys, default=None) -> Any:
-    """Безопасное получение вложенных значений."""
-    for key in keys:
-        if isinstance(data, dict):
-            data = data.get(key, default)
-        else:
-            return default
-    return data
-
-
-def normalize_log(log_entry: Dict) -> Dict:
-    """Нормализует одно событие лога."""
     normalized = {}
 
-    process = log_entry.get('process', {})
-    audit_token = process.get('audit_token', {})
-    executable = process.get('executable', {})
+    event = raw_event.get('Event', {})
+    system = event.get('System', {})
+    event_data_list = event.get('EventData', {}).get('Data', [])
 
-    fullpath = executable.get('path', '')
-    f_path, f_name, f_dir = extract_path_parts(fullpath)
-    cdhash = process.get('cdhash', '')
+    fields = {item['Name']: item.get('text', '') for item in event_data_list if 'Name' in item}
 
-    normalized['subject.account.id'] = str(audit_token.get('ruid', ''))
-    normalized['subject.account.session_id'] = str(process.get('session_id', ''))
-    normalized['subject.process.id'] = str(audit_token.get('pid', ''))
-    normalized['subject.process.parent.id'] = str(process.get('ppid', ''))
-    normalized['subject.process.fullpath'] = f_path
-    normalized['subject.process.name'] = f_name
-    normalized['subject.process.path'] = f_dir
-    normalized['subject.process.hash'] = f"UNKNOWN:{cdhash}" if cdhash else "UNKNOWN"
+    normalized['msgid'] = system.get('EventID', '')
 
-    normalized['msgid'] = str(log_entry.get('event_type', ''))
-    normalized['time'] = truncate_timestamp(log_entry.get('time', ''))
-    normalized['event_src.host'] = "127.0.0.1"
+    raw_time = system.get('TimeCreated', {}).get('SystemTime', '')
+    normalized['time'] = raw_time[:23] + 'Z' if len(raw_time) > 23 else raw_time
 
+    normalized['event_src.host'] = system.get('Computer', 'unknown')
 
-    event_data = log_entry.get('event', {})
+    subj_path = fields.get('Image', '')
+    subj_name = subj_path.split('\\')[-1] if subj_path else ''
+    subj_dir = '\\'.join(subj_path.split('\\')[:-1]) + '\\' if subj_path else ''
 
-    if 'open' in event_data:
-        file_info = event_data['open'].get('file', {})
-        obj_path = file_info.get('path', '')
-        o_path, o_name, o_dir = extract_path_parts(obj_path)
+    normalized['subject.process.id'] = fields.get('ProcessId', '')
+    normalized['subject.process.parent.id'] = fields.get('ParentProcessId', '')
+    normalized['subject.process.fullpath'] = subj_path
+    normalized['subject.process.name'] = subj_name
+    normalized['subject.process.path'] = subj_dir
+    normalized['subject.process.cmdline'] = fields.get('CommandLine', '')
+    normalized['subject.process.hash'] = fields.get('Hashes', '')
 
-        normalized['object.fullpath'] = o_path
-        normalized['object.name'] = o_name
-        normalized['object.path'] = o_dir
+    user_raw = fields.get('User', '')
+    normalized['subject.account.id'] = user_raw
 
-    elif 'fork' in event_data:
-        child_info = event_data['fork'].get('child', {})
-        child_exec = child_info.get('executable', {})
-        obj_path = child_exec.get('path', '')
-        o_path, o_name, o_dir = extract_path_parts(obj_path)
+    normalized['subject.account.session_id'] = fields.get('LogonId', '')
 
-        normalized['object.process.fullpath'] = o_path
-        normalized['object.process.name'] = o_name
-        normalized['object.process.path'] = o_dir
+    obj_path = fields.get('ParentImage', '')
+    if obj_path:
+        obj_name = obj_path.split('\\')[-1]
+        obj_dir = '\\'.join(obj_path.split('\\')[:-1]) + '\\'
+        normalized['object.process.fullpath'] = obj_path
+        normalized['object.process.name'] = obj_name
+        normalized['object.process.path'] = obj_dir
+        normalized['object.process.id'] = fields.get('ParentProcessId', '')
 
     return normalized
 
@@ -118,28 +76,23 @@ def process_log_file(input_file: str, output_file: str, taxonomy: dict):
     with open(input_file, 'r', encoding='utf-8') as f_in, \
          open(output_file, 'w', encoding='utf-8') as f_out:
 
-        for line_num, line in enumerate(f_in, 1):
-            line = line.strip()
-            if not line:
-                continue
+        read_json = f_in.read()
 
-            try:
-                log_entry = json.loads(line)
-                normalized = normalize_log(log_entry)
+        try:
+            log_entry = json.loads(read_json)
+            normalized = normalize_log(log_entry)
 
-                # Валидация по таксономии (если загружена)
-                if taxonomy:
-                    for key in normalized.keys():
-                        if key not in taxonomy.get('allowed_fields', []):
-                            print(f"[!] Поле {key} отсутствует в таксономии")
-                            break
+            if taxonomy:
+                for key in normalized.keys():
+                    if key not in taxonomy.get('Fields', []):
+                        print(f"[!] Поле {key} отсутствует в таксономии")
 
-                f_out.write(json.dumps(normalized, ensure_ascii=False) + '\n')
+            f_out.write(json.dumps(normalized, ensure_ascii=False) + '\n')
 
-            except json.JSONDecodeError as e:
-                print(f"[!] Ошибка JSON в строке {line_num}: {e}")
-            except Exception as e:
-                print(f"[!] Ошибка обработки строки {line_num}: {e}")
+        except json.JSONDecodeError as e:
+            print(f"[!] Ошибка чтения JSON: {e}")
+        except Exception as e:
+            print(f"[!] Ошибка: {e}")
 
 
 def normalize(taxonomy_path: str, correlation_path: str):
@@ -155,7 +108,8 @@ def normalize(taxonomy_path: str, correlation_path: str):
             file_input_path = os.path.join(input_path, file)
             output_file = file.replace("events", "norm_fields")
             file_output_path = os.path.join(input_path, output_file)
-            process_log_file(file_input_path, file_output_path, taxonomy)
+            if file_input_path != file_output_path:
+                process_log_file(file_input_path, file_output_path, taxonomy)
 
 
 if __name__ == '__main__':

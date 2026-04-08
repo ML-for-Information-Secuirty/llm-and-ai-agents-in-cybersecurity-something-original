@@ -1,0 +1,1965 @@
+{
+  "tactics": {
+    "Defense Evasion": {
+      "Indicator Removal from Tools": {
+        "subtechniques": []
+      },
+      "Hidden Window": {
+        "subtechniques": []
+      },
+      "Direct Volume Access": {
+        "subtechniques": []
+      },
+      "Rootkit": {
+        "subtechniques": []
+      },
+      "Component Firmware": {
+        "subtechniques": []
+      },
+      "Timestomp": {
+        "subtechniques": []
+      },
+      "Code Signing": {
+        "subtechniques": []
+      },
+      "Process Hollowing": {
+        "subtechniques": []
+      },
+      "Regsvcs/Regasm": {
+        "subtechniques": []
+      },
+      "Hide Artifacts": {
+        "subtechniques": [
+          "Hidden Window",
+          "Hidden Users",
+          "NTFS File Attributes",
+          "Process Argument Spoofing",
+          "Run Virtual Instance",
+          "Email Hiding Rules",
+          "VBA Stomping",
+          "Hidden File System",
+          "File/Path Exclusions",
+          "Hidden Files and Directories",
+          "Ignore Process Interrupts"
+        ]
+      },
+      "Disabling Security Tools": {
+        "subtechniques": []
+      },
+      "Indirect Command Execution": {
+        "subtechniques": []
+      },
+      "Deobfuscate/Decode Files or Information": {
+        "subtechniques": []
+      },
+      "Impair Defenses": {
+        "subtechniques": [
+          "Disable Windows Event Logging",
+          "Safe Mode Boot",
+          "Disable or Modify System Firewall",
+          "Disable or Modify Tools",
+          "Indicator Blocking",
+          "Impair Command History Logging",
+          "Spoof Security Alerting",
+          "Downgrade Attack"
+        ]
+      },
+      "Masquerading": {
+        "subtechniques": [
+          "Masquerade Account Name",
+          "Masquerade Task or Service",
+          "Rename Legitimate Utilities",
+          "Invalid Code Signature",
+          "Match Legitimate Resource Name or Location",
+          "Masquerade File Type",
+          "Browser Fingerprint",
+          "Right-to-Left Override",
+          "Double File Extension"
+        ]
+      },
+      "Process Injection": {
+        "subtechniques": [
+          "Thread Execution Hijacking",
+          "ListPlanting",
+          "Portable Executable Injection",
+          "Extra Window Memory Injection",
+          "Process Hollowing",
+          "Process Doppelgänging",
+          "Asynchronous Procedure Call",
+          "Thread Local Storage",
+          "Dynamic-link Library Injection"
+        ]
+      },
+      "Traffic Signaling": {
+        "subtechniques": [
+          "Socket Filters",
+          "Port Knocking"
+        ]
+      },
+      "System Binary Proxy Execution": {
+        "subtechniques": [
+          "Compiled HTML File",
+          "MMC",
+          "Msiexec",
+          "Verclsid",
+          "Electron Applications",
+          "Mshta",
+          "Regsvcs/Regasm",
+          "InstallUtil",
+          "Odbcconf",
+          "Rundll32",
+          "CMSTP",
+          "Mavinject",
+          "Control Panel",
+          "Regsvr32"
+        ]
+      },
+      "DLL Search Order Hijacking": {
+        "subtechniques": []
+      },
+      "Reflective Code Loading": {
+        "subtechniques": []
+      },
+      "Binary Padding": {
+        "subtechniques": []
+      },
+      "Use Alternate Authentication Material": {
+        "subtechniques": [
+          "Pass the Ticket",
+          "Pass the Hash"
+        ]
+      },
+      "Extra Window Memory Injection": {
+        "subtechniques": []
+      },
+      "Rogue Domain Controller": {
+        "subtechniques": []
+      },
+      "File Deletion": {
+        "subtechniques": []
+      },
+      "Modify Registry": {
+        "subtechniques": []
+      },
+      "Image File Execution Options Injection": {
+        "subtechniques": []
+      },
+      "Rundll32": {
+        "subtechniques": []
+      },
+      "File and Directory Permissions Modification": {
+        "subtechniques": [
+          "Windows File and Directory Permissions Modification"
+        ]
+      },
+      "Abuse Elevation Control Mechanism": {
+        "subtechniques": [
+          "Bypass User Account Control"
+        ]
+      },
+      "Regsvr32": {
+        "subtechniques": []
+      },
+      "Indicator Blocking": {
+        "subtechniques": []
+      },
+      "Redundant Access": {
+        "subtechniques": []
+      },
+      "Software Packing": {
+        "subtechniques": []
+      },
+      "SIP and Trust Provider Hijacking": {
+        "subtechniques": []
+      },
+      "Indicator Removal": {
+        "subtechniques": [
+          "Network Share Connection Removal",
+          "Clear Network Connection History and Configurations",
+          "File Deletion",
+          "Clear Command History",
+          "Relocate Malware",
+          "Timestomp",
+          "Clear Mailbox Data",
+          "Clear Persistence",
+          "Clear Windows Event Logs"
+        ]
+      },
+      "CMSTP": {
+        "subtechniques": []
+      },
+      "Pre-OS Boot": {
+        "subtechniques": [
+          "Bootkit",
+          "Component Firmware",
+          "System Firmware"
+        ]
+      },
+      "Scripting": {
+        "subtechniques": []
+      },
+      "Virtualization/Sandbox Evasion": {
+        "subtechniques": [
+          "System Checks",
+          "Time Based Checks",
+          "User Activity Based Checks"
+        ]
+      },
+      "Execution Guardrails": {
+        "subtechniques": [
+          "Mutual Exclusion",
+          "Environmental Keying"
+        ]
+      },
+      "Control Panel Items": {
+        "subtechniques": []
+      },
+      "Selective Exclusion": {
+        "subtechniques": []
+      },
+      "Component Object Model Hijacking": {
+        "subtechniques": []
+      },
+      "Parent PID Spoofing": {
+        "subtechniques": []
+      },
+      "Mshta": {
+        "subtechniques": []
+      },
+      "Delay Execution": {
+        "subtechniques": []
+      },
+      "Hijack Execution Flow": {
+        "subtechniques": [
+          "Services File Permissions Weakness",
+          "Path Interception by Search Order Hijacking",
+          "AppDomainManager",
+          "Path Interception by PATH Environment Variable",
+          "DLL Side-Loading",
+          "COR_PROFILER",
+          "KernelCallbackTable",
+          "Services Registry Permissions Weakness",
+          "DLL",
+          "Path Interception by Unquoted Path",
+          "Executable Installer File Permissions Weakness"
+        ]
+      },
+      "Valid Accounts": {
+        "subtechniques": [
+          "Domain Accounts",
+          "Local Accounts",
+          "Default Accounts"
+        ]
+      },
+      "DLL Side-Loading": {
+        "subtechniques": []
+      },
+      "Obfuscated Files or Information": {
+        "subtechniques": [
+          "Binary Padding",
+          "Encrypted/Encoded File",
+          "Polymorphic Code",
+          "Command Obfuscation",
+          "SVG Smuggling",
+          "Embedded Payloads",
+          "Software Packing",
+          "Steganography",
+          "Compression",
+          "Indicator Removal from Tools",
+          "Compile After Delivery",
+          "HTML Smuggling",
+          "LNK Icon Smuggling",
+          "Stripped Payloads",
+          "Dynamic API Resolution",
+          "Junk Code Insertion",
+          "Fileless Storage"
+        ]
+      },
+      "Subvert Trust Controls": {
+        "subtechniques": [
+          "Code Signing Policy Modification",
+          "Install Root Certificate",
+          "Code Signing",
+          "SIP and Trust Provider Hijacking",
+          "Mark-of-the-Web Bypass"
+        ]
+      },
+      "Process Doppelgänging": {
+        "subtechniques": []
+      },
+      "BITS Jobs": {
+        "subtechniques": []
+      },
+      "Impersonation": {
+        "subtechniques": []
+      },
+      "Bypass User Account Control": {
+        "subtechniques": []
+      },
+      "Compile After Delivery": {
+        "subtechniques": []
+      },
+      "Compiled HTML File": {
+        "subtechniques": []
+      },
+      "Install Root Certificate": {
+        "subtechniques": []
+      },
+      "Hidden Files and Directories": {
+        "subtechniques": []
+      },
+      "Template Injection": {
+        "subtechniques": []
+      },
+      "Access Token Manipulation": {
+        "subtechniques": [
+          "Make and Impersonate Token",
+          "Token Impersonation/Theft",
+          "SID-History Injection",
+          "Create Process with Token",
+          "Parent PID Spoofing"
+        ]
+      },
+      "Email Spoofing": {
+        "subtechniques": []
+      },
+      "Debugger Evasion": {
+        "subtechniques": []
+      },
+      "Network Share Connection Removal": {
+        "subtechniques": []
+      },
+      "Domain or Tenant Policy Modification": {
+        "subtechniques": [
+          "Trust Modification",
+          "Group Policy Modification"
+        ]
+      },
+      "XSL Script Processing": {
+        "subtechniques": []
+      },
+      "NTFS File Attributes": {
+        "subtechniques": []
+      },
+      "Modify Authentication Process": {
+        "subtechniques": [
+          "Reversible Encryption",
+          "Multi-Factor Authentication",
+          "Network Provider DLL",
+          "Domain Controller Authentication",
+          "Password Filter DLL",
+          "Hybrid Identity"
+        ]
+      },
+      "System Script Proxy Execution": {
+        "subtechniques": [
+          "SyncAppvPublishingServer",
+          "PubPrn"
+        ]
+      },
+      "InstallUtil": {
+        "subtechniques": []
+      },
+      "Exploitation for Defense Evasion": {
+        "subtechniques": []
+      },
+      "Trusted Developer Utilities Proxy Execution": {
+        "subtechniques": [
+          "MSBuild",
+          "JamPlus",
+          "ClickOnce"
+        ]
+      }
+    },
+    "Execution": {
+      "Windows Management Instrumentation": {
+        "subtechniques": []
+      },
+      "Shared Modules": {
+        "subtechniques": []
+      },
+      "Regsvcs/Regasm": {
+        "subtechniques": []
+      },
+      "Scheduled Task/Job": {
+        "subtechniques": [
+          "At",
+          "Scheduled Task"
+        ]
+      },
+      "Native API": {
+        "subtechniques": []
+      },
+      "Rundll32": {
+        "subtechniques": []
+      },
+      "Input Injection": {
+        "subtechniques": []
+      },
+      "Regsvr32": {
+        "subtechniques": []
+      },
+      "LSASS Driver": {
+        "subtechniques": []
+      },
+      "Command and Scripting Interpreter": {
+        "subtechniques": [
+          "AutoHotKey & AutoIT",
+          "JavaScript",
+          "Python",
+          "PowerShell",
+          "Windows Command Shell",
+          "Visual Basic",
+          "Lua"
+        ]
+      },
+      "Component Object Model and Distributed COM": {
+        "subtechniques": []
+      },
+      "CMSTP": {
+        "subtechniques": []
+      },
+      "Scripting": {
+        "subtechniques": []
+      },
+      "User Execution": {
+        "subtechniques": [
+          "Malicious File",
+          "Malicious Link",
+          "Malicious Copy and Paste",
+          "Malicious Library"
+        ]
+      },
+      "Control Panel Items": {
+        "subtechniques": []
+      },
+      "Software Deployment Tools": {
+        "subtechniques": []
+      },
+      "Mshta": {
+        "subtechniques": []
+      },
+      "Graphical User Interface": {
+        "subtechniques": []
+      },
+      "Inter-Process Communication": {
+        "subtechniques": [
+          "Component Object Model",
+          "Dynamic Data Exchange"
+        ]
+      },
+      "Exploitation for Client Execution": {
+        "subtechniques": []
+      },
+      "Windows Remote Management": {
+        "subtechniques": []
+      },
+      "System Services": {
+        "subtechniques": [
+          "Service Execution"
+        ]
+      },
+      "Compiled HTML File": {
+        "subtechniques": []
+      },
+      "Dynamic Data Exchange": {
+        "subtechniques": []
+      },
+      "Service Execution": {
+        "subtechniques": []
+      },
+      "PowerShell": {
+        "subtechniques": []
+      },
+      "InstallUtil": {
+        "subtechniques": []
+      }
+    },
+    "Collection": {
+      "Screen Capture": {
+        "subtechniques": []
+      },
+      "Adversary-in-the-Middle": {
+        "subtechniques": [
+          "LLMNR/NBT-NS Poisoning and SMB Relay",
+          "DHCP Spoofing",
+          "ARP Cache Poisoning"
+        ]
+      },
+      "Audio Capture": {
+        "subtechniques": []
+      },
+      "Email Collection": {
+        "subtechniques": [
+          "Email Forwarding Rule",
+          "Local Email Collection",
+          "Remote Email Collection"
+        ]
+      },
+      "Data from Removable Media": {
+        "subtechniques": []
+      },
+      "Automated Collection": {
+        "subtechniques": []
+      },
+      "Clipboard Data": {
+        "subtechniques": []
+      },
+      "Data from Local System": {
+        "subtechniques": []
+      },
+      "Archive Collected Data": {
+        "subtechniques": [
+          "Archive via Utility",
+          "Archive via Custom Method",
+          "Archive via Library"
+        ]
+      },
+      "Browser Session Hijacking": {
+        "subtechniques": []
+      },
+      "Video Capture": {
+        "subtechniques": []
+      },
+      "Data Staged": {
+        "subtechniques": [
+          "Remote Data Staging",
+          "Local Data Staging"
+        ]
+      },
+      "Data from Network Shared Drive": {
+        "subtechniques": []
+      },
+      "Input Capture": {
+        "subtechniques": [
+          "GUI Input Capture",
+          "Web Portal Capture",
+          "Keylogging",
+          "Credential API Hooking"
+        ]
+      },
+      "Data from Information Repositories": {
+        "subtechniques": [
+          "Sharepoint",
+          "Databases"
+        ]
+      }
+    },
+    "Persistence": {
+      "Bootkit": {
+        "subtechniques": []
+      },
+      "Boot or Logon Initialization Scripts": {
+        "subtechniques": [
+          "Logon Script (Windows)",
+          "Network Logon Script"
+        ]
+      },
+      "File System Permissions Weakness": {
+        "subtechniques": []
+      },
+      "Create or Modify System Process": {
+        "subtechniques": [
+          "Windows Service"
+        ]
+      },
+      "External Remote Services": {
+        "subtechniques": []
+      },
+      "Component Firmware": {
+        "subtechniques": []
+      },
+      "Boot or Logon Autostart Execution": {
+        "subtechniques": [
+          "Authentication Package",
+          "Time Providers",
+          "Security Support Provider",
+          "Winlogon Helper DLL",
+          "Active Setup",
+          "LSASS Driver",
+          "Registry Run Keys / Startup Folder",
+          "Port Monitors",
+          "Shortcut Modification",
+          "Print Processors"
+        ]
+      },
+      "Port Monitors": {
+        "subtechniques": []
+      },
+      "Screensaver": {
+        "subtechniques": []
+      },
+      "Office Application Startup": {
+        "subtechniques": [
+          "Add-ins",
+          "Outlook Rules",
+          "Office Test",
+          "Office Template Macros",
+          "Outlook Home Page",
+          "Outlook Forms"
+        ]
+      },
+      "AppInit DLLs": {
+        "subtechniques": []
+      },
+      "Scheduled Task/Job": {
+        "subtechniques": []
+      },
+      "Software Extensions": {
+        "subtechniques": [
+          "Browser Extensions",
+          "IDE Extensions"
+        ]
+      },
+      "Service Registry Permissions Weakness": {
+        "subtechniques": []
+      },
+      "Traffic Signaling": {
+        "subtechniques": []
+      },
+      "DLL Search Order Hijacking": {
+        "subtechniques": []
+      },
+      "New Service": {
+        "subtechniques": []
+      },
+      "Hypervisor": {
+        "subtechniques": []
+      },
+      "AppCert DLLs": {
+        "subtechniques": []
+      },
+      "Winlogon Helper DLL": {
+        "subtechniques": []
+      },
+      "Authentication Package": {
+        "subtechniques": []
+      },
+      "Modify Registry": {
+        "subtechniques": []
+      },
+      "Image File Execution Options Injection": {
+        "subtechniques": []
+      },
+      "Modify Existing Service": {
+        "subtechniques": []
+      },
+      "Hooking": {
+        "subtechniques": []
+      },
+      "System Firmware": {
+        "subtechniques": []
+      },
+      "Change Default File Association": {
+        "subtechniques": []
+      },
+      "Redundant Access": {
+        "subtechniques": []
+      },
+      "Security Support Provider": {
+        "subtechniques": []
+      },
+      "LSASS Driver": {
+        "subtechniques": []
+      },
+      "PowerShell Profile": {
+        "subtechniques": []
+      },
+      "SIP and Trust Provider Hijacking": {
+        "subtechniques": []
+      },
+      "Application Shimming": {
+        "subtechniques": []
+      },
+      "Pre-OS Boot": {
+        "subtechniques": []
+      },
+      "Registry Run Keys / Startup Folder": {
+        "subtechniques": []
+      },
+      "Compromise Host Software Binary": {
+        "subtechniques": []
+      },
+      "Shortcut Modification": {
+        "subtechniques": []
+      },
+      "Component Object Model Hijacking": {
+        "subtechniques": []
+      },
+      "Accessibility Features": {
+        "subtechniques": []
+      },
+      "Account Manipulation": {
+        "subtechniques": [
+          "Additional Email Delegate Permissions",
+          "Device Registration",
+          "Additional Local or Domain Groups"
+        ]
+      },
+      "Hijack Execution Flow": {
+        "subtechniques": []
+      },
+      "Valid Accounts": {
+        "subtechniques": []
+      },
+      "Event Triggered Execution": {
+        "subtechniques": [
+          "Image File Execution Options Injection",
+          "Netsh Helper DLL",
+          "Windows Management Instrumentation Event Subscription",
+          "Change Default File Association",
+          "PowerShell Profile",
+          "AppInit DLLs",
+          "Accessibility Features",
+          "Python Startup Hooks",
+          "Screensaver",
+          "Component Object Model Hijacking",
+          "Application Shimming",
+          "AppCert DLLs",
+          "Installer Packages"
+        ]
+      },
+      "Netsh Helper DLL": {
+        "subtechniques": []
+      },
+      "Web Shell": {
+        "subtechniques": []
+      },
+      "Path Interception": {
+        "subtechniques": []
+      },
+      "BITS Jobs": {
+        "subtechniques": []
+      },
+      "Server Software Component": {
+        "subtechniques": [
+          "IIS Components",
+          "SQL Stored Procedures",
+          "Terminal Services DLL",
+          "Web Shell",
+          "Transport Agent"
+        ]
+      },
+      "Hidden Files and Directories": {
+        "subtechniques": []
+      },
+      "Time Providers": {
+        "subtechniques": []
+      },
+      "Exclusive Control": {
+        "subtechniques": []
+      },
+      "Create Account": {
+        "subtechniques": [
+          "Domain Account",
+          "Local Account"
+        ]
+      },
+      "Windows Management Instrumentation Event Subscription": {
+        "subtechniques": []
+      },
+      "Power Settings": {
+        "subtechniques": []
+      },
+      "Modify Authentication Process": {
+        "subtechniques": []
+      }
+    },
+    "Privilege Escalation": {
+      "Boot or Logon Initialization Scripts": {
+        "subtechniques": []
+      },
+      "File System Permissions Weakness": {
+        "subtechniques": []
+      },
+      "Create or Modify System Process": {
+        "subtechniques": []
+      },
+      "SID-History Injection": {
+        "subtechniques": []
+      },
+      "Boot or Logon Autostart Execution": {
+        "subtechniques": []
+      },
+      "Port Monitors": {
+        "subtechniques": []
+      },
+      "AppInit DLLs": {
+        "subtechniques": []
+      },
+      "Scheduled Task/Job": {
+        "subtechniques": []
+      },
+      "Service Registry Permissions Weakness": {
+        "subtechniques": []
+      },
+      "Process Injection": {
+        "subtechniques": []
+      },
+      "DLL Search Order Hijacking": {
+        "subtechniques": []
+      },
+      "New Service": {
+        "subtechniques": []
+      },
+      "Escape to Host": {
+        "subtechniques": []
+      },
+      "AppCert DLLs": {
+        "subtechniques": []
+      },
+      "Extra Window Memory Injection": {
+        "subtechniques": []
+      },
+      "Image File Execution Options Injection": {
+        "subtechniques": []
+      },
+      "Hooking": {
+        "subtechniques": []
+      },
+      "Abuse Elevation Control Mechanism": {
+        "subtechniques": []
+      },
+      "PowerShell Profile": {
+        "subtechniques": []
+      },
+      "Application Shimming": {
+        "subtechniques": []
+      },
+      "Accessibility Features": {
+        "subtechniques": []
+      },
+      "Parent PID Spoofing": {
+        "subtechniques": []
+      },
+      "Account Manipulation": {
+        "subtechniques": []
+      },
+      "Hijack Execution Flow": {
+        "subtechniques": []
+      },
+      "Valid Accounts": {
+        "subtechniques": []
+      },
+      "Exploitation for Privilege Escalation": {
+        "subtechniques": []
+      },
+      "Event Triggered Execution": {
+        "subtechniques": []
+      },
+      "Web Shell": {
+        "subtechniques": []
+      },
+      "Path Interception": {
+        "subtechniques": []
+      },
+      "Bypass User Account Control": {
+        "subtechniques": []
+      },
+      "Access Token Manipulation": {
+        "subtechniques": []
+      },
+      "Domain or Tenant Policy Modification": {
+        "subtechniques": []
+      }
+    },
+    "Credential Access": {
+      "Adversary-in-the-Middle": {
+        "subtechniques": []
+      },
+      "OS Credential Dumping": {
+        "subtechniques": [
+          "LSA Secrets",
+          "NTDS",
+          "DCSync",
+          "Security Account Manager",
+          "Cached Domain Credentials",
+          "LSASS Memory"
+        ]
+      },
+      "LLMNR/NBT-NS Poisoning and Relay": {
+        "subtechniques": []
+      },
+      "Steal Web Session Cookie": {
+        "subtechniques": []
+      },
+      "Credentials in Registry": {
+        "subtechniques": []
+      },
+      "Network Sniffing": {
+        "subtechniques": []
+      },
+      "Steal or Forge Kerberos Tickets": {
+        "subtechniques": [
+          "Golden Ticket",
+          "AS-REP Roasting",
+          "Silver Ticket",
+          "Kerberoasting"
+        ]
+      },
+      "Credentials from Password Stores": {
+        "subtechniques": [
+          "Credentials from Web Browsers",
+          "Windows Credential Manager",
+          "Password Managers"
+        ]
+      },
+      "Unsecured Credentials": {
+        "subtechniques": [
+          "Credentials in Registry",
+          "Private Keys",
+          "Credentials In Files",
+          "Shell History",
+          "Group Policy Preferences"
+        ]
+      },
+      "Credentials from Web Browsers": {
+        "subtechniques": []
+      },
+      "Private Keys": {
+        "subtechniques": []
+      },
+      "Hooking": {
+        "subtechniques": []
+      },
+      "Steal or Forge Authentication Certificates": {
+        "subtechniques": []
+      },
+      "Input Prompt": {
+        "subtechniques": []
+      },
+      "Forge Web Credentials": {
+        "subtechniques": [
+          "SAML Tokens",
+          "Web Cookies"
+        ]
+      },
+      "Multi-Factor Authentication Request Generation": {
+        "subtechniques": []
+      },
+      "Exploitation for Credential Access": {
+        "subtechniques": []
+      },
+      "Brute Force": {
+        "subtechniques": [
+          "Password Spraying",
+          "Password Cracking",
+          "Password Guessing",
+          "Credential Stuffing"
+        ]
+      },
+      "Kerberoasting": {
+        "subtechniques": []
+      },
+      "Forced Authentication": {
+        "subtechniques": []
+      },
+      "Password Filter DLL": {
+        "subtechniques": []
+      },
+      "Credentials in Files": {
+        "subtechniques": []
+      },
+      "Input Capture": {
+        "subtechniques": []
+      },
+      "Multi-Factor Authentication Interception": {
+        "subtechniques": []
+      },
+      "Modify Authentication Process": {
+        "subtechniques": []
+      }
+    },
+    "Discovery": {
+      "System Owner/User Discovery": {
+        "subtechniques": []
+      },
+      "Permission Groups Discovery": {
+        "subtechniques": [
+          "Local Groups",
+          "Domain Groups"
+        ]
+      },
+      "Group Policy Discovery": {
+        "subtechniques": []
+      },
+      "Device Driver Discovery": {
+        "subtechniques": []
+      },
+      "Security Software Discovery": {
+        "subtechniques": []
+      },
+      "System Service Discovery": {
+        "subtechniques": []
+      },
+      "Network Sniffing": {
+        "subtechniques": []
+      },
+      "Network Share Discovery": {
+        "subtechniques": []
+      },
+      "Peripheral Device Discovery": {
+        "subtechniques": []
+      },
+      "System Information Discovery": {
+        "subtechniques": []
+      },
+      "Application Window Discovery": {
+        "subtechniques": []
+      },
+      "Browser Information Discovery": {
+        "subtechniques": []
+      },
+      "Virtual Machine Discovery": {
+        "subtechniques": []
+      },
+      "System Network Configuration Discovery": {
+        "subtechniques": [
+          "Wi-Fi Discovery",
+          "Internet Connection Discovery"
+        ]
+      },
+      "Account Discovery": {
+        "subtechniques": [
+          "Domain Account",
+          "Email Account",
+          "Local Account"
+        ]
+      },
+      "Domain Trust Discovery": {
+        "subtechniques": []
+      },
+      "File and Directory Discovery": {
+        "subtechniques": []
+      },
+      "System Network Connections Discovery": {
+        "subtechniques": []
+      },
+      "Virtualization/Sandbox Evasion": {
+        "subtechniques": []
+      },
+      "Log Enumeration": {
+        "subtechniques": []
+      },
+      "Process Discovery": {
+        "subtechniques": []
+      },
+      "Password Policy Discovery": {
+        "subtechniques": []
+      },
+      "Query Registry": {
+        "subtechniques": []
+      },
+      "System Location Discovery": {
+        "subtechniques": [
+          "System Language Discovery"
+        ]
+      },
+      "Remote System Discovery": {
+        "subtechniques": []
+      },
+      "Network Service Discovery": {
+        "subtechniques": []
+      },
+      "Software Discovery": {
+        "subtechniques": [
+          "Security Software Discovery",
+          "Backup Software Discovery"
+        ]
+      },
+      "Debugger Evasion": {
+        "subtechniques": []
+      },
+      "Local Storage Discovery": {
+        "subtechniques": []
+      },
+      "System Time Discovery": {
+        "subtechniques": []
+      }
+    },
+    "Impact": {
+      "Stored Data Manipulation": {
+        "subtechniques": []
+      },
+      "Disk Wipe": {
+        "subtechniques": [
+          "Disk Structure Wipe",
+          "Disk Content Wipe"
+        ]
+      },
+      "Service Stop": {
+        "subtechniques": []
+      },
+      "Disk Structure Wipe": {
+        "subtechniques": []
+      },
+      "Defacement": {
+        "subtechniques": [
+          "Internal Defacement",
+          "External Defacement"
+        ]
+      },
+      "Financial Theft": {
+        "subtechniques": []
+      },
+      "Data Manipulation": {
+        "subtechniques": [
+          "Runtime Data Manipulation",
+          "Transmitted Data Manipulation",
+          "Stored Data Manipulation"
+        ]
+      },
+      "Account Access Removal": {
+        "subtechniques": []
+      },
+      "Data Encrypted for Impact": {
+        "subtechniques": []
+      },
+      "Disk Content Wipe": {
+        "subtechniques": []
+      },
+      "Email Bombing": {
+        "subtechniques": []
+      },
+      "Endpoint Denial of Service": {
+        "subtechniques": [
+          "OS Exhaustion Flood",
+          "Application or System Exploitation",
+          "Application Exhaustion Flood",
+          "Service Exhaustion Flood"
+        ]
+      },
+      "Runtime Data Manipulation": {
+        "subtechniques": []
+      },
+      "Transmitted Data Manipulation": {
+        "subtechniques": []
+      },
+      "Resource Hijacking": {
+        "subtechniques": [
+          "Compute Hijacking",
+          "Bandwidth Hijacking"
+        ]
+      },
+      "Data Destruction": {
+        "subtechniques": []
+      },
+      "Network Denial of Service": {
+        "subtechniques": [
+          "Direct Network Flood",
+          "Reflection Amplification"
+        ]
+      },
+      "Firmware Corruption": {
+        "subtechniques": []
+      },
+      "Inhibit System Recovery": {
+        "subtechniques": []
+      },
+      "System Shutdown/Reboot": {
+        "subtechniques": []
+      }
+    },
+    "Initial Access": {
+      "External Remote Services": {
+        "subtechniques": []
+      },
+      "Spearphishing Link": {
+        "subtechniques": []
+      },
+      "Replication Through Removable Media": {
+        "subtechniques": []
+      },
+      "Supply Chain Compromise": {
+        "subtechniques": [
+          "Compromise Software Supply Chain",
+          "Compromise Hardware Supply Chain",
+          "Compromise Software Dependencies and Development Tools"
+        ]
+      },
+      "Exploit Public-Facing Application": {
+        "subtechniques": []
+      },
+      "Content Injection": {
+        "subtechniques": []
+      },
+      "Spearphishing Attachment": {
+        "subtechniques": []
+      },
+      "Trusted Relationship": {
+        "subtechniques": []
+      },
+      "Phishing": {
+        "subtechniques": [
+          "Spearphishing Voice",
+          "Spearphishing Attachment",
+          "Spearphishing via Service",
+          "Spearphishing Link"
+        ]
+      },
+      "Valid Accounts": {
+        "subtechniques": []
+      },
+      "Spearphishing via Service": {
+        "subtechniques": []
+      },
+      "Hardware Additions": {
+        "subtechniques": []
+      },
+      "Drive-by Compromise": {
+        "subtechniques": []
+      },
+      "Wi-Fi Networks": {
+        "subtechniques": []
+      }
+    },
+    "Command and Control": {
+      "Domain Fronting": {
+        "subtechniques": []
+      },
+      "Application Layer Protocol": {
+        "subtechniques": [
+          "Publish/Subscribe Protocols",
+          "File Transfer Protocols",
+          "Mail Protocols",
+          "Web Protocols",
+          "DNS"
+        ]
+      },
+      "Custom Cryptographic Protocol": {
+        "subtechniques": []
+      },
+      "Remote Access Tools": {
+        "subtechniques": [
+          "Remote Desktop Software",
+          "IDE Tunneling",
+          "Remote Access Hardware"
+        ]
+      },
+      "Multilayer Encryption": {
+        "subtechniques": []
+      },
+      "Content Injection": {
+        "subtechniques": []
+      },
+      "Traffic Signaling": {
+        "subtechniques": []
+      },
+      "Standard Cryptographic Protocol": {
+        "subtechniques": []
+      },
+      "Protocol Tunneling": {
+        "subtechniques": []
+      },
+      "Domain Generation Algorithms": {
+        "subtechniques": []
+      },
+      "Communication Through Removable Media": {
+        "subtechniques": []
+      },
+      "Proxy": {
+        "subtechniques": [
+          "Domain Fronting",
+          "External Proxy",
+          "Multi-hop Proxy",
+          "Internal Proxy"
+        ]
+      },
+      "Dynamic Resolution": {
+        "subtechniques": [
+          "Domain Generation Algorithms",
+          "Fast Flux DNS",
+          "DNS Calculation"
+        ]
+      },
+      "Multi-hop Proxy": {
+        "subtechniques": []
+      },
+      "Web Service": {
+        "subtechniques": [
+          "One-Way Communication",
+          "Bidirectional Communication",
+          "Dead Drop Resolver"
+        ]
+      },
+      "Multi-Stage Channels": {
+        "subtechniques": []
+      },
+      "Multiband Communication": {
+        "subtechniques": []
+      },
+      "Data Obfuscation": {
+        "subtechniques": [
+          "Junk Data",
+          "Steganography",
+          "Protocol or Service Impersonation"
+        ]
+      },
+      "Non-Standard Port": {
+        "subtechniques": []
+      },
+      "Encrypted Channel": {
+        "subtechniques": [
+          "Asymmetric Cryptography",
+          "Symmetric Cryptography"
+        ]
+      },
+      "Non-Application Layer Protocol": {
+        "subtechniques": []
+      },
+      "Uncommonly Used Port": {
+        "subtechniques": []
+      },
+      "Data Encoding": {
+        "subtechniques": [
+          "Non-Standard Encoding",
+          "Standard Encoding"
+        ]
+      },
+      "Ingress Tool Transfer": {
+        "subtechniques": []
+      },
+      "Hide Infrastructure": {
+        "subtechniques": []
+      },
+      "Fallback Channels": {
+        "subtechniques": []
+      },
+      "Custom Command and Control Protocol": {
+        "subtechniques": []
+      },
+      "Commonly Used Port": {
+        "subtechniques": []
+      }
+    },
+    "Lateral Movement": {
+      "Taint Shared Content": {
+        "subtechniques": []
+      },
+      "Application Deployment Software": {
+        "subtechniques": []
+      },
+      "Replication Through Removable Media": {
+        "subtechniques": []
+      },
+      "Use Alternate Authentication Material": {
+        "subtechniques": []
+      },
+      "Remote Desktop Protocol": {
+        "subtechniques": []
+      },
+      "Remote Services": {
+        "subtechniques": [
+          "SMB/Windows Admin Shares",
+          "Distributed Component Object Model",
+          "Remote Desktop Protocol",
+          "Windows Remote Management",
+          "VNC"
+        ]
+      },
+      "Remote Service Session Hijacking": {
+        "subtechniques": [
+          "RDP Hijacking"
+        ]
+      },
+      "Component Object Model and Distributed COM": {
+        "subtechniques": []
+      },
+      "Shared Webroot": {
+        "subtechniques": []
+      },
+      "Software Deployment Tools": {
+        "subtechniques": []
+      },
+      "Exploitation of Remote Services": {
+        "subtechniques": []
+      },
+      "Internal Spearphishing": {
+        "subtechniques": []
+      },
+      "Pass the Ticket": {
+        "subtechniques": []
+      },
+      "Lateral Tool Transfer": {
+        "subtechniques": []
+      },
+      "Pass the Hash": {
+        "subtechniques": []
+      },
+      "Windows Remote Management": {
+        "subtechniques": []
+      },
+      "Windows Admin Shares": {
+        "subtechniques": []
+      }
+    },
+    "Exfiltration": {
+      "Exfiltration Over Web Service": {
+        "subtechniques": [
+          "Exfiltration Over Webhook",
+          "Exfiltration to Cloud Storage",
+          "Exfiltration to Code Repository",
+          "Exfiltration to Text Storage Sites"
+        ]
+      },
+      "Scheduled Transfer": {
+        "subtechniques": []
+      },
+      "Exfiltration Over Other Network Medium": {
+        "subtechniques": [
+          "Exfiltration Over Bluetooth"
+        ]
+      },
+      "Automated Exfiltration": {
+        "subtechniques": []
+      },
+      "Exfiltration Over C2 Channel": {
+        "subtechniques": []
+      },
+      "Exfiltration Over Alternative Protocol": {
+        "subtechniques": [
+          "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+          "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+          "Exfiltration Over Unencrypted Non-C2 Protocol"
+        ]
+      },
+      "Data Compressed": {
+        "subtechniques": []
+      },
+      "Data Transfer Size Limits": {
+        "subtechniques": []
+      },
+      "Data Encrypted": {
+        "subtechniques": []
+      },
+      "Exfiltration Over Physical Medium": {
+        "subtechniques": [
+          "Exfiltration over USB"
+        ]
+      }
+    }
+  },
+  "techniques_flat": [
+    "Pre-OS Boot",
+    "System Binary Proxy Execution: Electron Applications",
+    "Domain or Tenant Policy Modification: Trust Modification",
+    "Input Capture: Web Portal Capture",
+    "Spearphishing Attachment",
+    "Credentials from Password Stores: Password Managers",
+    "Component Object Model and Distributed COM",
+    "Data Destruction",
+    "Hardware Additions",
+    "Masquerading: Masquerade File Type",
+    "Endpoint Denial of Service: OS Exhaustion Flood",
+    "File and Directory Permissions Modification: Windows File and Directory Permissions Modification",
+    "Defacement: External Defacement",
+    "Account Access Removal",
+    "Application Window Discovery",
+    "Create Account: Local Account",
+    "Indicator Removal: Clear Network Connection History and Configurations",
+    "Resource Hijacking: Bandwidth Hijacking",
+    "Trusted Relationship",
+    "Scheduled Task/Job: Scheduled Task",
+    "Web Service: One-Way Communication",
+    "Remote Services: SMB/Windows Admin Shares",
+    "Obfuscated Files or Information: Stripped Payloads",
+    "Boot or Logon Autostart Execution: Active Setup",
+    "Credentials in Registry",
+    "Hijack Execution Flow: Path Interception by Search Order Hijacking",
+    "Firmware Corruption",
+    "Browser Session Hijacking",
+    "Multilayer Encryption",
+    "Trusted Developer Utilities Proxy Execution: MSBuild",
+    "Hide Artifacts: Hidden Files and Directories",
+    "Peripheral Device Discovery",
+    "Multi-Factor Authentication Request Generation",
+    "Impair Defenses: Downgrade Attack",
+    "OS Credential Dumping: Cached Domain Credentials",
+    "Use Alternate Authentication Material: Pass the Hash",
+    "Exploitation for Defense Evasion",
+    "Custom Command and Control Protocol",
+    "Group Policy Discovery",
+    "BITS Jobs",
+    "Component Firmware",
+    "Power Settings",
+    "Input Capture: GUI Input Capture",
+    "Log Enumeration",
+    "Time Providers",
+    "Data Transfer Size Limits",
+    "System Services: Service Execution",
+    "Dynamic Data Exchange",
+    "Application Layer Protocol: Mail Protocols",
+    "Application Layer Protocol: Publish/Subscribe Protocols",
+    "Server Software Component: IIS Components",
+    "Debugger Evasion",
+    "Screensaver",
+    "Exploitation for Client Execution",
+    "Shortcut Modification",
+    "System Time Discovery",
+    "Multi-Factor Authentication Interception",
+    "Event Triggered Execution: Component Object Model Hijacking",
+    "Scheduled Task/Job: At",
+    "Compiled HTML File",
+    "Data Encoding: Standard Encoding",
+    "Account Manipulation: Additional Local or Domain Groups",
+    "Wi-Fi Networks",
+    "Service Registry Permissions Weakness",
+    "System Information Discovery",
+    "Web Shell",
+    "Software Deployment Tools",
+    "Data Encoding: Non-Standard Encoding",
+    "Virtualization/Sandbox Evasion: Time Based Checks",
+    "Adversary-in-the-Middle",
+    "Supply Chain Compromise: Compromise Software Supply Chain",
+    "Access Token Manipulation: SID-History Injection",
+    "File and Directory Discovery",
+    "Hijack Execution Flow: Path Interception by Unquoted Path",
+    "Exfiltration Over Web Service: Exfiltration to Text Storage Sites",
+    "Security Software Discovery",
+    "Event Triggered Execution: AppInit DLLs",
+    "System Network Configuration Discovery: Wi-Fi Discovery",
+    "Remote System Discovery",
+    "Boot or Logon Autostart Execution: Security Support Provider",
+    "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+    "SIP and Trust Provider Hijacking",
+    "Supply Chain Compromise: Compromise Hardware Supply Chain",
+    "Reflective Code Loading",
+    "Process Hollowing",
+    "System Binary Proxy Execution: Regsvr32",
+    "Indicator Removal: Clear Persistence",
+    "System Firmware",
+    "Traffic Signaling",
+    "Data Obfuscation: Protocol or Service Impersonation",
+    "Drive-by Compromise",
+    "Proxy: External Proxy",
+    "Direct Volume Access",
+    "Process Injection: Asynchronous Procedure Call",
+    "Bootkit",
+    "Account Manipulation: Device Registration",
+    "Hijack Execution Flow: Services Registry Permissions Weakness",
+    "Remote Services: Distributed Component Object Model",
+    "Unsecured Credentials: Credentials In Files",
+    "Ingress Tool Transfer",
+    "Indicator Removal: Network Share Connection Removal",
+    "Boot or Logon Autostart Execution: Print Processors",
+    "Obfuscated Files or Information: Fileless Storage",
+    "Command and Scripting Interpreter: AutoHotKey & AutoIT",
+    "Execution Guardrails: Mutual Exclusion",
+    "Credentials from Password Stores: Credentials from Web Browsers",
+    "Encrypted Channel: Asymmetric Cryptography",
+    "Lateral Tool Transfer",
+    "Hooking",
+    "Command and Scripting Interpreter: JavaScript",
+    "Process Injection: Extra Window Memory Injection",
+    "Clipboard Data",
+    "Indicator Removal: Clear Mailbox Data",
+    "OS Credential Dumping: DCSync",
+    "Data from Information Repositories: Sharepoint",
+    "Event Triggered Execution: Change Default File Association",
+    "Hidden Window",
+    "Spearphishing Link",
+    "InstallUtil",
+    "Commonly Used Port",
+    "Process Injection",
+    "System Binary Proxy Execution: Msiexec",
+    "Hidden Files and Directories",
+    "Network Share Connection Removal",
+    "Image File Execution Options Injection",
+    "Boot or Logon Autostart Execution: Time Providers",
+    "Inhibit System Recovery",
+    "Phishing: Spearphishing Link",
+    "Windows Management Instrumentation",
+    "Modify Authentication Process: Domain Controller Authentication",
+    "Valid Accounts",
+    "Impair Defenses: Disable Windows Event Logging",
+    "Subvert Trust Controls: Install Root Certificate",
+    "Non-Application Layer Protocol",
+    "Forge Web Credentials: SAML Tokens",
+    "Exfiltration Over Other Network Medium: Exfiltration Over Bluetooth",
+    "Use Alternate Authentication Material: Pass the Ticket",
+    "Remote Service Session Hijacking: RDP Hijacking",
+    "File Deletion",
+    "System Location Discovery: System Language Discovery",
+    "Delay Execution",
+    "Event Triggered Execution: Accessibility Features",
+    "Compile After Delivery",
+    "Software Discovery: Backup Software Discovery",
+    "Parent PID Spoofing",
+    "Hide Artifacts: Hidden Users",
+    "Software Packing",
+    "Web Service: Dead Drop Resolver",
+    "Use Alternate Authentication Material",
+    "Boot or Logon Initialization Scripts",
+    "Process Injection: ListPlanting",
+    "Obfuscated Files or Information: Command Obfuscation",
+    "Boot or Logon Autostart Execution: Port Monitors",
+    "Event Triggered Execution: Python Startup Hooks",
+    "Modify Existing Service",
+    "Service Stop",
+    "Subvert Trust Controls: Code Signing Policy Modification",
+    "Valid Accounts: Domain Accounts",
+    "Abuse Elevation Control Mechanism: Bypass User Account Control",
+    "Process Injection: Process Doppelgänging",
+    "Hide Artifacts: Process Argument Spoofing",
+    "Escape to Host",
+    "System Binary Proxy Execution: Control Panel",
+    "Automated Collection",
+    "Credentials in Files",
+    "Hide Artifacts: Hidden Window",
+    "Install Root Certificate",
+    "System Binary Proxy Execution: Compiled HTML File",
+    "Credentials from Web Browsers",
+    "Hide Artifacts: VBA Stomping",
+    "PowerShell",
+    "Stored Data Manipulation",
+    "Accessibility Features",
+    "Obfuscated Files or Information: LNK Icon Smuggling",
+    "Permission Groups Discovery: Domain Groups",
+    "Create Account: Domain Account",
+    "Replication Through Removable Media",
+    "Obfuscated Files or Information: Junk Code Insertion",
+    "Event Triggered Execution",
+    "Mshta",
+    "Winlogon Helper DLL",
+    "Process Doppelgänging",
+    "Port Monitors",
+    "Masquerading: Masquerade Task or Service",
+    "Software Discovery: Security Software Discovery",
+    "Obfuscated Files or Information: Steganography",
+    "Obfuscated Files or Information: Polymorphic Code",
+    "Endpoint Denial of Service: Application or System Exploitation",
+    "Event Triggered Execution: Screensaver",
+    "DLL Search Order Hijacking",
+    "Pass the Hash",
+    "Data from Network Shared Drive",
+    "Access Token Manipulation",
+    "Impair Defenses: Disable or Modify Tools",
+    "System Binary Proxy Execution: Verclsid",
+    "Network Sniffing",
+    "System Script Proxy Execution: SyncAppvPublishingServer",
+    "Event Triggered Execution: Installer Packages",
+    "Obfuscated Files or Information: Compression",
+    "Obfuscated Files or Information: Encrypted/Encoded File",
+    "Scheduled Transfer",
+    "Netsh Helper DLL",
+    "OS Credential Dumping: LSA Secrets",
+    "Private Keys",
+    "Brute Force: Credential Stuffing",
+    "Pre-OS Boot: Component Firmware",
+    "Device Driver Discovery",
+    "Valid Accounts: Local Accounts",
+    "Phishing: Spearphishing Attachment",
+    "Office Application Startup: Office Test",
+    "Protocol Tunneling",
+    "Domain Trust Discovery",
+    "Email Bombing",
+    "Transmitted Data Manipulation",
+    "Credentials from Password Stores: Windows Credential Manager",
+    "Unsecured Credentials: Credentials in Registry",
+    "Account Manipulation: Additional Email Delegate Permissions",
+    "Obfuscated Files or Information: Indicator Removal from Tools",
+    "User Execution: Malicious Library",
+    "Input Capture: Credential API Hooking",
+    "Masquerading: Masquerade Account Name",
+    "Exclusive Control",
+    "Network Service Discovery",
+    "Resource Hijacking: Compute Hijacking",
+    "AppCert DLLs",
+    "System Binary Proxy Execution: Regsvcs/Regasm",
+    "Modify Authentication Process",
+    "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
+    "Remote Services: VNC",
+    "Obfuscated Files or Information: Software Packing",
+    "Application Deployment Software",
+    "Deobfuscate/Decode Files or Information",
+    "Virtualization/Sandbox Evasion: User Activity Based Checks",
+    "Modify Authentication Process: Password Filter DLL",
+    "Proxy: Multi-hop Proxy",
+    "Email Collection: Email Forwarding Rule",
+    "Process Injection: Portable Executable Injection",
+    "Archive Collected Data: Archive via Custom Method",
+    "Trusted Developer Utilities Proxy Execution: JamPlus",
+    "Hijack Execution Flow: KernelCallbackTable",
+    "OS Credential Dumping: NTDS",
+    "Indicator Blocking",
+    "Masquerading: Right-to-Left Override",
+    "Data Encrypted",
+    "Domain Fronting",
+    "Shared Webroot",
+    "Application Layer Protocol: DNS",
+    "Modify Authentication Process: Multi-Factor Authentication",
+    "Hide Infrastructure",
+    "Network Share Discovery",
+    "Proxy: Domain Fronting",
+    "Uncommonly Used Port",
+    "System Binary Proxy Execution: CMSTP",
+    "Remote Access Tools: Remote Desktop Software",
+    "Exfiltration Over Web Service: Exfiltration to Code Repository",
+    "Valid Accounts: Default Accounts",
+    "Unsecured Credentials: Private Keys",
+    "Input Capture: Keylogging",
+    "Bypass User Account Control",
+    "Data from Removable Media",
+    "Brute Force: Password Cracking",
+    "Application Layer Protocol: File Transfer Protocols",
+    "Process Injection: Dynamic-link Library Injection",
+    "System Owner/User Discovery",
+    "Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+    "Local Storage Discovery",
+    "Hijack Execution Flow: DLL",
+    "Rogue Domain Controller",
+    "Domain Generation Algorithms",
+    "Graphical User Interface",
+    "Forge Web Credentials: Web Cookies",
+    "Office Application Startup: Outlook Forms",
+    "Data from Information Repositories: Databases",
+    "System Network Connections Discovery",
+    "Change Default File Association",
+    "Communication Through Removable Media",
+    "Multi-Stage Channels",
+    "Hijack Execution Flow: AppDomainManager",
+    "Hijack Execution Flow: DLL Side-Loading",
+    "Access Token Manipulation: Make and Impersonate Token",
+    "Data Manipulation: Transmitted Data Manipulation",
+    "Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay",
+    "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted Non-C2 Protocol",
+    "Hide Artifacts: Run Virtual Instance",
+    "Software Extensions: Browser Extensions",
+    "OS Credential Dumping: LSASS Memory",
+    "Multi-hop Proxy",
+    "Event Triggered Execution: PowerShell Profile",
+    "Phishing: Spearphishing via Service",
+    "Spearphishing via Service",
+    "File System Permissions Weakness",
+    "Authentication Package",
+    "Native API",
+    "System Binary Proxy Execution: Odbcconf",
+    "Network Denial of Service: Reflection Amplification",
+    "Rootkit",
+    "Video Capture",
+    "Account Discovery: Domain Account",
+    "Remote Services: Windows Remote Management",
+    "Data Compressed",
+    "Disk Structure Wipe",
+    "Dynamic Resolution: Fast Flux DNS",
+    "Remote Services: Remote Desktop Protocol",
+    "Account Discovery: Local Account",
+    "Network Denial of Service: Direct Network Flood",
+    "Windows Admin Shares",
+    "Dynamic Resolution: DNS Calculation",
+    "Defacement: Internal Defacement",
+    "Application Layer Protocol: Web Protocols",
+    "Data Staged: Local Data Staging",
+    "Remote Desktop Protocol",
+    "Remote Access Tools: Remote Access Hardware",
+    "Internal Spearphishing",
+    "Unsecured Credentials: Group Policy Preferences",
+    "Impersonation",
+    "Hypervisor",
+    "Compromise Host Software Binary",
+    "Hide Artifacts: Ignore Process Interrupts",
+    "Boot or Logon Autostart Execution: Shortcut Modification",
+    "Impair Defenses: Spoof Security Alerting",
+    "Modify Registry",
+    "Server Software Component: Terminal Services DLL",
+    "Steal or Forge Kerberos Tickets: Golden Ticket",
+    "Virtualization/Sandbox Evasion",
+    "Audio Capture",
+    "Input Prompt",
+    "Query Registry",
+    "Email Collection: Remote Email Collection",
+    "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+    "Office Application Startup: Office Template Macros",
+    "System Binary Proxy Execution: Rundll32",
+    "Access Token Manipulation: Parent PID Spoofing",
+    "Office Application Startup: Outlook Home Page",
+    "Encrypted Channel: Symmetric Cryptography",
+    "Content Injection",
+    "Data Staged: Remote Data Staging",
+    "Access Token Manipulation: Token Impersonation/Theft",
+    "Forced Authentication",
+    "Brute Force: Password Spraying",
+    "Boot or Logon Autostart Execution: LSASS Driver",
+    "Timestomp",
+    "Exploitation for Privilege Escalation",
+    "Multiband Communication",
+    "System Service Discovery",
+    "Indicator Removal from Tools",
+    "Hide Artifacts: Hidden File System",
+    "Fallback Channels",
+    "Data Encrypted for Impact",
+    "Process Injection: Process Hollowing",
+    "Virtual Machine Discovery",
+    "System Binary Proxy Execution: Mavinject",
+    "AppInit DLLs",
+    "Event Triggered Execution: AppCert DLLs",
+    "Steal or Forge Kerberos Tickets: AS-REP Roasting",
+    "Data from Local System",
+    "Email Collection: Local Email Collection",
+    "Shared Modules",
+    "Traffic Signaling: Socket Filters",
+    "Data Manipulation: Stored Data Manipulation",
+    "Template Injection",
+    "User Execution: Malicious Link",
+    "Account Discovery: Email Account",
+    "External Remote Services",
+    "Impair Defenses: Disable or Modify System Firewall",
+    "Regsvr32",
+    "Masquerading: Match Legitimate Resource Name or Location",
+    "Impair Defenses: Safe Mode Boot",
+    "Scheduled Task/Job",
+    "Selective Exclusion",
+    "Pre-OS Boot: System Firmware",
+    "Exploit Public-Facing Application",
+    "Input Injection",
+    "New Service",
+    "Exploitation of Remote Services",
+    "Path Interception",
+    "Automated Exfiltration",
+    "OS Credential Dumping: Security Account Manager",
+    "Boot or Logon Initialization Scripts: Network Logon Script",
+    "Hide Artifacts: File/Path Exclusions",
+    "Taint Shared Content",
+    "Exfiltration Over Alternative Protocol: Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+    "User Execution: Malicious Copy and Paste",
+    "Brute Force: Password Guessing",
+    "Modify Authentication Process: Reversible Encryption",
+    "CMSTP",
+    "Archive Collected Data: Archive via Library",
+    "Boot or Logon Autostart Execution: Authentication Package",
+    "Browser Information Discovery",
+    "Steal or Forge Kerberos Tickets: Kerberoasting",
+    "Subvert Trust Controls: Code Signing",
+    "Disk Wipe: Disk Content Wipe",
+    "Indicator Removal: File Deletion",
+    "Modify Authentication Process: Network Provider DLL",
+    "Software Extensions: IDE Extensions",
+    "Email Spoofing",
+    "Exfiltration Over Alternative Protocol: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+    "Control Panel Items",
+    "Windows Remote Management",
+    "Steal or Forge Authentication Certificates",
+    "Code Signing",
+    "Phishing: Spearphishing Voice",
+    "System Binary Proxy Execution: Mshta",
+    "Create or Modify System Process",
+    "Disabling Security Tools",
+    "Adversary-in-the-Middle: ARP Cache Poisoning",
+    "Command and Scripting Interpreter: Lua",
+    "Domain or Tenant Policy Modification: Group Policy Modification",
+    "System Network Configuration Discovery: Internet Connection Discovery",
+    "Event Triggered Execution: Netsh Helper DLL",
+    "Obfuscated Files or Information: Binary Padding",
+    "Binary Padding",
+    "Disk Wipe: Disk Structure Wipe",
+    "Boot or Logon Autostart Execution: Winlogon Helper DLL",
+    "Traffic Signaling: Port Knocking",
+    "Masquerading: Invalid Code Signature",
+    "System Binary Proxy Execution: MMC",
+    "System Binary Proxy Execution: InstallUtil",
+    "System Shutdown/Reboot",
+    "Exfiltration Over C2 Channel",
+    "Process Discovery",
+    "Inter-Process Communication: Dynamic Data Exchange",
+    "Password Policy Discovery",
+    "Command and Scripting Interpreter: PowerShell",
+    "Disk Content Wipe",
+    "Command and Scripting Interpreter: Python",
+    "LLMNR/NBT-NS Poisoning and Relay",
+    "Runtime Data Manipulation",
+    "Hijack Execution Flow",
+    "Non-Standard Port",
+    "Rundll32",
+    "Server Software Component: Transport Agent",
+    "Command and Scripting Interpreter: Windows Command Shell",
+    "Component Object Model Hijacking",
+    "Obfuscated Files or Information: Compile After Delivery",
+    "Scripting",
+    "Create or Modify System Process: Windows Service",
+    "Masquerading: Browser Fingerprint",
+    "Permission Groups Discovery: Local Groups",
+    "Data Obfuscation: Steganography",
+    "Unsecured Credentials: Shell History",
+    "Data Manipulation: Runtime Data Manipulation",
+    "XSL Script Processing",
+    "Boot or Logon Autostart Execution",
+    "Regsvcs/Regasm",
+    "LSASS Driver",
+    "Execution Guardrails: Environmental Keying",
+    "Process Injection: Thread Execution Hijacking",
+    "User Execution: Malicious File",
+    "Command and Scripting Interpreter: Visual Basic",
+    "Event Triggered Execution: Image File Execution Options Injection",
+    "Pre-OS Boot: Bootkit",
+    "Steal Web Session Cookie",
+    "Remote Access Tools: IDE Tunneling",
+    "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+    "Hijack Execution Flow: Path Interception by PATH Environment Variable",
+    "Obfuscated Files or Information: Dynamic API Resolution",
+    "Proxy: Internal Proxy",
+    "Hijack Execution Flow: Executable Installer File Permissions Weakness",
+    "NTFS File Attributes",
+    "Impair Defenses: Impair Command History Logging",
+    "Event Triggered Execution: Application Shimming",
+    "Pass the Ticket",
+    "DLL Side-Loading",
+    "Data Obfuscation: Junk Data",
+    "Indirect Command Execution",
+    "Redundant Access",
+    "Application Shimming",
+    "Input Capture",
+    "Password Filter DLL",
+    "Access Token Manipulation: Create Process with Token",
+    "Service Execution",
+    "Custom Cryptographic Protocol",
+    "Trusted Developer Utilities Proxy Execution: ClickOnce",
+    "Server Software Component: SQL Stored Procedures",
+    "Abuse Elevation Control Mechanism",
+    "Indicator Removal: Timestomp",
+    "Obfuscated Files or Information: Embedded Payloads",
+    "Process Injection: Thread Local Storage",
+    "Office Application Startup: Add-ins",
+    "Obfuscated Files or Information: HTML Smuggling",
+    "Archive Collected Data: Archive via Utility",
+    "Domain or Tenant Policy Modification",
+    "Impair Defenses: Indicator Blocking",
+    "Adversary-in-the-Middle: DHCP Spoofing",
+    "Kerberoasting",
+    "Obfuscated Files or Information: SVG Smuggling",
+    "Hijack Execution Flow: Services File Permissions Weakness",
+    "Subvert Trust Controls: Mark-of-the-Web Bypass",
+    "Exploitation for Credential Access",
+    "Masquerading: Rename Legitimate Utilities",
+    "Financial Theft",
+    "Account Manipulation",
+    "System Script Proxy Execution: PubPrn",
+    "Virtualization/Sandbox Evasion: System Checks",
+    "Hide Artifacts: NTFS File Attributes",
+    "Steal or Forge Kerberos Tickets: Silver Ticket",
+    "PowerShell Profile",
+    "Subvert Trust Controls: SIP and Trust Provider Hijacking",
+    "Web Service: Bidirectional Communication",
+    "Hijack Execution Flow: COR_PROFILER",
+    "Windows Management Instrumentation Event Subscription",
+    "Endpoint Denial of Service: Application Exhaustion Flood",
+    "Endpoint Denial of Service: Service Exhaustion Flood",
+    "Exfiltration Over Physical Medium: Exfiltration over USB",
+    "SID-History Injection",
+    "Dynamic Resolution: Domain Generation Algorithms",
+    "Indicator Removal: Relocate Malware",
+    "Office Application Startup: Outlook Rules",
+    "Security Support Provider",
+    "Server Software Component: Web Shell",
+    "Registry Run Keys / Startup Folder",
+    "Indicator Removal: Clear Command History",
+    "Masquerading: Double File Extension",
+    "Screen Capture",
+    "Exfiltration Over Web Service: Exfiltration Over Webhook",
+    "Standard Cryptographic Protocol",
+    "Extra Window Memory Injection",
+    "Indicator Removal: Clear Windows Event Logs",
+    "Inter-Process Communication: Component Object Model",
+    "Modify Authentication Process: Hybrid Identity",
+    "Hide Artifacts: Email Hiding Rules"
+  ]
+}
