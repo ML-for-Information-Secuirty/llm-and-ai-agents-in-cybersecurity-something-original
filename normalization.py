@@ -51,6 +51,19 @@ def normalize_log(raw_event: dict) -> dict:
         normalized['object.process.path'] = obj_dir
         normalized['object.process.id'] = fields.get('ParentProcessId', '')
 
+    event_id = system.get('EventID', '')
+    if event_id == "1":
+        normalized["object.process.parent.id"] = ""
+
+    elif event_id == "10":
+        normalized["object.process.parent.id"] = fields.get("TargetParentProcessId", "")
+
+    elif event_id == "8":
+        normalized["object.process.parent.id"] = fields.get("TargetProcessParentId", "")
+   
+    else:
+        normalized["object.process.parent.id"] = ""
+
     return normalized
 
 
